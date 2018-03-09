@@ -39,12 +39,12 @@ describe('fizzBuzzer', function() {
   });
 
   it.only('should return error if not a number', function() {
-
-    const badCases = ['apple', NaN, true];
+    const badCases = ['apple', false, true];
     badCases.forEach(function(input) {
       expect(function() {
-        return fizzBuzzer(input);
+        fizzBuzzer(input);
       }).to.throw();
     });
   });
 });
+
